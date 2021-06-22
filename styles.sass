@@ -1,6 +1,7 @@
 html, body
     margin: 0
     padding: 0
+    background-color: #7fffd4
  
 h1, h2, h3, h4, h5, h6
     font-family: 'Staatliches', 'Arial'
@@ -13,6 +14,8 @@ p
 button
     background-color: hsla(0,0%,0%, 0)
     border: 0
+    box-shadow: 0px 3px 5px -1px hsla(0, 0%, 0%, .2), 0px 6px 10px 0px hsla(0, 0%, 0%, .14), 0px 1px 18px 0px hsla(0, 0%, 0%, .12)
+    
 
 header
     padding: 2em 2em 0em 2em
@@ -25,29 +28,35 @@ header
 main
     padding: 0em 2em 2em 2em
 
-nav
-    background-color: black
+
+nav   
+    opacity: 0 
+    background-color: hsla(0,0%,10%,1)
     position: fixed
-    height: 100vh
-    width: 100vw
+    padding: 2em
     top: 0
     left: 0
-    padding: 2em
+    width: 100vw
+    height: 100vh
 
     h1
         margin: 0
-        color: white
+        color: #7fffd4
         font-size: 3em
 
     ul
         padding-left: 0em
-        margin-top: 2em
+        margin-top: 2em        
+        transform: translateX(-48px)
 
         li
             margin-bottom: 1.4em
+            opacity: 0
+            list-style-type: none
+
             a
                 font-family: 'Staatliches', 'Arial'
-                color: hsla(0,0%,100%,1)
+                color: #7fffd4
                 font-size: 2em
 
 
@@ -63,3 +72,17 @@ nav.hidden
     height: 50px
     width: 50px
     z-index: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+    div
+        height: 4px
+        width: 28px
+        background-color: #7fffd4
+
+    div:nth-child(2)
+        margin: 4px 0px 4px 0px
+    
